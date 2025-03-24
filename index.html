@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>job finder app</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Job search application</h1>
+    </header>
+    <main>
+        <section class="search section">
+            <h2>Find jobs</h2>
+            <form id="search-form">
+                <input type="text" id="location" placeholder="Enter location" value="Rwanda">
+                <input type="text" id="category" placeholder="Category of job" value="your choice">
+                <label>
+                    <input type="checkbox" id="remote-checkbox"> Remote 
+                </label>
+                <label>
+                    <input type="checkbox" id="onsite-checkbox"> On site
+                </label>
+                <button type="submit">Search Jobs</button>
+            </form>
+        </section>
+        <section class="job-results">
+            <h2>Job Listings</h2>
+            <div id="job-list"></div>
+        </section>
+        <section class="resources">
+            <h2>Job Search Resources</h2>
+            <ul>
+                <li><a href="https://www.indeed.com/career-advice/resumes-cover-letters/10-resume-writing-tips">10-resume-writing-tips</a></li>
+                <li><a href="https://ca.indeed.com/career-advice/interviewing/how-to-prepare-for-a-job-interview">how-to-prepare-for-a-job-interview
+                <li><a href="https://www.indeed.com/career-advice/finding-a-job/completing-job-application-to-get-an-interview">job completing-job-application</a></li>
+            </ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

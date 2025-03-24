@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #0073e6;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+main {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.search-section, .job-results, .resources {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background: #0073e6;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #005bb5;
+}
+
+.job-results #job-list {
+    margin-top: 10px;
+}
+
+.resources ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resources li {
+    margin: 5px 0;
+}
+
+.resources a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.resources a:hover {
+    text-decoration: underline;
+}
