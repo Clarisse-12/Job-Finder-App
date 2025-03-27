@@ -12,21 +12,21 @@
     </header>
     <main>
         <section class="search section">
-            <h2>Find jobs</h2>
+            <h2>Find jobs in US</h2>
             <form id="search-form">
-                <input type="text" id="location" placeholder="Enter location" value="Rwanda">
-                <input type="text" id="category" placeholder="Category of job" value="your choice">
+                <input type="text" id="location" placeholder="Enter location">
+                <input type="text" id="category" placeholder="Category of job">
                 <label>
-                    <input type="checkbox" id="remote-checkbox"> Remote 
+                    <input type="checkbox" id="fulltime-checkbox"> full-time 
                 </label>
                 <label>
-                    <input type="checkbox" id="onsite-checkbox"> On site
+                    <input type="checkbox" id="parttime-checkbox"> part-time
                 </label>
                 <button type="submit">Search Jobs</button>
             </form>
         </section>
         <section class="job-results">
-            <h2>Job Listings</h2>
+            <h2>List of job</h2>
             <div id="job-list"></div>
         </section>
         <section class="resources">
@@ -38,6 +38,9 @@
             </ul>
         </section>
     </main>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
+    <footer>
+        <p>Powered by <a href="https://rapidapi.com/search?term=jsearch&sortBy=ByRelevance" target="_blank">rapidapi</a></p>
+    </footer>
 </body>
 </html>

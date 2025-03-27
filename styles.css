@@ -2,8 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #a7aeb5;
     color: #333;
+}
+body {
+    padding-top: 60px; 
 }
 
 header {
@@ -77,5 +80,21 @@ button:hover {
 }
 
 .resources a:hover {
+    text-decoration: underline;
+}
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    color: #666;
+    border-top: 1px solid #ddd;
+}
+
+footer a {
+    color: #ff6b6b;
+    text-decoration: none;
+}
+
+footer a:hover {
     text-decoration: underline;
 }
