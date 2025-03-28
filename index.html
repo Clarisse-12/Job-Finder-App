@@ -3,32 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>job finder app</title>
+    <!--title of project-->
+    <title>job finder application</title>
+    <!--css linked section-->
     <link rel="stylesheet" href="styles.css">
 </head>
+<!--body starting-->
 <body>
+   <!-- header section--> 
     <header>
-        <h1>Job search application</h1>
+        <h1>Job search For Rwandan Youth</h1>
     </header>
+    <!--main of body-->
     <main>
+        <!--search section-->
         <section class="search section">
-            <h2>Find jobs in US</h2>
+            <h2>Find your Dream Job here</h2>
+            <!--form starting-->
             <form id="search-form">
                 <input type="text" id="location" placeholder="Enter location">
-                <input type="text" id="category" placeholder="Category of job">
+                <input type="text" id="category" placeholder="category of job">
+                <button id="clear">Clear</button>
+                <!--chackboxes section-->
                 <label>
                     <input type="checkbox" id="fulltime-checkbox"> full-time 
                 </label>
                 <label>
                     <input type="checkbox" id="parttime-checkbox"> part-time
                 </label>
+                <!--button section-->
                 <button type="submit">Search Jobs</button>
             </form>
         </section>
+        <!--job result section-->
         <section class="job-results">
             <h2>List of job</h2>
             <div id="job-list"></div>
         </section>
+        <!--resource section-->
         <section class="resources">
             <h2>Job Search Resources</h2>
             <ul>
@@ -38,7 +50,9 @@
             </ul>
         </section>
     </main>
+    <!--javascript linked section-->
     <script type="module" src="script.js"></script>
+    <!--footer section-->
     <footer>
         <p>Powered by <a href="https://rapidapi.com/search?term=jsearch&sortBy=ByRelevance" target="_blank">rapidapi</a></p>
     </footer>

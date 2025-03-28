@@ -1,3 +1,4 @@
+/*body section editing*/
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,7 +9,7 @@ body {
 body {
     padding-top: 60px; 
 }
-
+/*header section*/
 header {
     background: #0073e6;
     color: white;
@@ -27,14 +28,14 @@ main {
     flex-direction: column;
     gap: 20px;
 }
-
+/*search section , job result and resources*/
 .search-section, .job-results, .resources {
     background: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
+/*form editing section*/
 form {
     display: flex;
     flex-wrap: wrap;
@@ -47,7 +48,7 @@ input[type="text"] {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-
+/*button editing section*/
 button {
     background: #0073e6;
     color: white;
@@ -60,11 +61,11 @@ button {
 button:hover {
     background: #005bb5;
 }
-
+/*job result editing section*/
 .job-results #job-list {
     margin-top: 10px;
 }
-
+/*resources section*/
 .resources ul {
     list-style-type: none;
     padding: 0;
@@ -82,6 +83,7 @@ button:hover {
 .resources a:hover {
     text-decoration: underline;
 }
+/*footer editing*/
 footer {
     text-align: center;
     margin-top: 50px;
