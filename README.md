@@ -44,5 +44,76 @@ JOB-FINDER-APP/
     
     
  ## Demo video
+https://youtu.be/wZIgsZbkuiU
+## deployment Process
 
-     link to my demo 
+1. first all i start with copy my work from desktop to servers where i use to save it while i was working my project on visual studio code here is the code i use to copy:
+   - $ scp -r <application_directory> user@Web01:/var/www/html/
+2. then after to copy my work i start to edit my configirution file of web01 and web02
+here is how it's look:
+  - server {
+    listen 80;
+    server_name your domain name www.your domain name;
+    error_page 404 /404.html;
+    add_header X-Served-By $hostname;
+
+    location = /404.html {
+        root /var/www/html;
+    }
+
+    location / {
+	directory path;
+    }
+
+    location /redirect_me {
+        return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+    }
+}
+
+server {
+    listen 80;
+    server_name your domain name;
+    add_header X-Served-By $hostname;
+
+    location / {
+        your work directory;
+    }
+}
+
+3. after to edit my web servers i start to edit my configuration file of l01 
+The load balancer (Lb01) was configured to distribute traffic between Web01 and Web02 using the following steps:
+  -install  and configure load balancer software: then i choose to use haproxy, For HAProxy, the configuration was done in /etc/haproxy/haproxy.cfg
+  here example of haproxy file 
+          frontend http-in
+            bind *:80
+            bind *:443 ssl crt /etc/letsencrypt/live/www.aziza24.tech/ca.pem
+        mode http
+            default_backend servers
+
+        backend servers
+            balance roundrobin
+            server web01 <Web01_IP_Address>:80 check
+            server web02 <Web02_IP_Address>:80 check
+        
+    * Example Nginx configuration:
+        
+        http {
+            upstream backend {
+                server <Web01_IP_Address>:80;
+                server <Web02_IP_Address>:80;
+ }
+
+            server {
+                listen 80;
+                location / {
+                    proxy_pass http://backend;
+                    proxy_http_version 1.1;
+                    proxy_set_header Upgrade $http_upgrade;
+                    proxy_set_header Connection 'upgrade';
+                    proxy_set_header Host $host;
+                    proxy_cache_bypass $http_upgrade;
+                }
+            }
+        }
+     testing 
+     I try to access my application by using my domain name .
